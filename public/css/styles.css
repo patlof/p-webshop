@@ -7,4 +7,27 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: #333;
+}
+
+.close-icon {
+  width: 3em;
+  height: 3em;
+}
+
+.nav-buttons {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  gap: 3em;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-buttons button {
+  display: inline-block;
+  font-size: 3em;
+  padding: 0.5em 1em;
+  border: none;
+  background-color: #c02c2c;
 }

@@ -1,0 +1,49 @@
+/* rem and em do NOT depend on html font-size in media queries!
+instead, 1rem = 1em = 16px */
+
+/* 1350 screensize/16 = 84 */
+
+/**************************/
+/* BELOW 1344px (Smaller desktops) */
+/**************************/
+@media (max-width: 84em) {
+}
+
+/**************************/
+/* BELOW 1200px (Landscape tablets) */
+/**************************/
+@media (max-width: 75em) {
+  html {
+    /* 9px/16px = 56.2% */
+    font-size: 56.25%;
+  }
+}
+
+/**************************/
+/* BELOW 944px (Tablets) */
+/**************************/
+@media (max-width: 59em) {
+  /* 8px / 16px = 50% */
+
+  html {
+    font-size: 50%;
+  }
+}
+
+/**************************/
+/* MOBILE NAVIGATION */
+/**************************/
+
+/**************************/
+/* SMALLER TABLETS */
+/**************************/
+/* 700/16= 43.75 = 44 */
+@media (max-width: 44em) {
+}
+/**************************/
+/* Below 600px for Phones */
+/*600/16= 38em*/
+/**************************/
+
+@media (max-width: 38em) {
+}
