@@ -10,6 +10,11 @@ html {
   color: #333;
 }
 
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
 /***********************/
 /* NAVIGATION */
 /***********************/
@@ -71,14 +76,9 @@ html {
   display: none;
 }
 
-/* <header class="header">
-  <nav class="main-nav">
-    <ul class="main-nav-list">
-      <li class="main-nav-link">Startsida</li>
-      <li class="main-nav-link">Produktsida</li>
-      <li class="main-nav-link">Leveransvilkor</li>
-      <li class="main-nav-link">Om Pailun</li>
-      <li class="main-nav-link">Kassa</li>
-    </ul>
-  </nav>
-</header> */
+/***********************/
+/* Content */
+/***********************/
+.title {
+  padding: 2em 0;
+}

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="css/queries.css" />
+
+    <title>Pailun Webshop</title>
+  </head>
+  <body>
+    <%- include ('partials/header') %>
+    <div class="title">
+      <h1>Flowers</h1>
+      <p>We have all of these flowers in stock.</p>
+    </div>
+    <div class="container">
+      <!-- <div class="leftside"><h4>Left side</h4></div> -->
+      <div class="product-card"><h4>Product 1</h4></div>
+      <div class="product-card">
+        <h4>Marigold</h4>
+        <div class="product-image">
+          <img src="img/dahlia_one.jpg" height="250" alt="Pic of flower" />
+        </div>
+        <p>
+          Marigolds are popular, hardy annual flowers renowned for their vibrant
+          orange and yellow blooms, essential for sunny gardens and pest
+          control.
+        </p>
+        <div class="product-buttons">
+          <button class="readmore-btn">Read more</button>
+          <button class="buy-btn">Buy</button>
+        </div>
+      </div>
+
+      <div class="product-card"><h4>Product 3</h4></div>
+      <div class="product-card"><h4>Product 4</h4></div>
+    </div>
+    <%- include ('partials/footer') %>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="../js/script.js" defer></script>
+  </body>
+</html>
