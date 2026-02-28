@@ -49,7 +49,9 @@ db.exec(`CREATE TABLE IF NOT EXISTS products (
 //   5.99,
 // );
 
-// db.close();
+//Read from database
+const products = db.prepare("SELECT * FROM products").all();
+console.log(products);
 
 app.use(express.static("public"));
 
@@ -58,7 +60,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/flowers", (req, res) => {
-  res.render("flowers.ejs");
+  res.render("flowers.ejs", { products: products });
 });
 
 app.listen(port, () => {

@@ -82,3 +82,17 @@ body {
 .title {
   padding: 2em 0;
 }
+
+/***********************/
+/* Footer */
+/***********************/
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+  font-size: 2em;
+}
+
+.copyright {
+  margin-left: 0.5em;
+}
