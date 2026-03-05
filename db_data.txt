@@ -35,43 +35,43 @@
 
 // const productFive = insert.run(
 //   "tools",
-//   "Rose D",
-//   "A romantic gester starts with a rose",
-//   "img/dahlia_one.jpg",
-//   3.99,
+//   "Mower",
+//   "A mower that cuts the grass like a green on a golfcourse!",
+//   "img/grasklippare.jpg",
+//   355.50,
 // );
 // const productSix = insert.run(
-//   "flowers",
-//   "T Dawn",
-//   "When they bloom the spring is already here!",
-//   "img/dahlia_two.jpg",
-//   1.99,
+//   "tools",
+//   "Garden hoe",
+//   "Do the hardword easy before cultivating.",
+//   "img/hacka.jpg",
+//   19.99,
 // );
 // const productSeven = insert.run(
-//   "flowers",
-//   "Lilly D",
-//   "The arom is breathtaking!",
-//   "img/dahlia_three.jpg",
-//   0.99,
+//   "tools",
+//   "Watering can",
+//   "A watering can in beautiful zinc.",
+//   "img/kanna.jpg",
+//   9.99,
 // );
 // const productEight = insert.run(
-//   "flowers",
-//   "Da Dahlia",
-//   "A flower that makes your wife happy!",
-//   "img/dahlia_four.jpg",
-//   5.99,
+//   "tools",
+//   "Watering can",
+//   "With this water can it gets greener than ever.",
+//   "img/kanna2.jpg",
+//   2.85,
 // );
 // const productNine = insert.run(
-//   "flowers",
-//   "Lilly D",
-//   "The arom is breathtaking!",
-//   "img/dahlia_three.jpg",
-//   0.99,
+//   "tools",
+//   "secateurs",
+//   "Help the trees become large and powerful.",
+//   "img/sekator.jpg",
+//   22.99,
 // );
 // const productTen = insert.run(
-//   "flowers",
-//   "Da Dahlia",
-//   "A flower that makes your wife happy!",
-//   "img/dahlia_four.jpg",
-//   5.99,
+//   "tools",
+//   "Rake",
+//   "With this rake all of the leaves will be gone in notime.",
+//   "img/kratta.jpg",
+//   15.99,
 // );

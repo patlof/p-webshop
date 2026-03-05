@@ -124,7 +124,7 @@ body {
   padding: 0 3em 3em 3em;
   display: grid;
   height: fit-content;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: repeat(auto, 1fr);
   gap: 5em;
 }

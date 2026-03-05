@@ -16,10 +16,17 @@ db.exec(`CREATE TABLE IF NOT EXISTS products (
         image TEXT,
         price DECIMAL(6, 2) NOT NULL)`);
 
-
-
 //Read from database
 const products = db.prepare("SELECT * FROM products").all();
+
+//Split answer products by categorys
+const flowerItems = products.filter(function (item) {
+  return item.category === "flowers";
+});
+
+const gardenItems = products.filter(function (item) {
+  return item.category === "tools";
+});
 
 app.use(express.static("public"));
 
@@ -28,7 +35,11 @@ app.get("/", (req, res) => {
 });
 
 app.get("/flowers", (req, res) => {
-  res.render("flowers.ejs", { products: products });
+  res.render("flowers.ejs", { products: flowerItems });
+});
+
+app.get("/garden", (req, res) => {
+  res.render("garden.ejs", { products: gardenItems });
 });
 
 app.listen(port, () => {
