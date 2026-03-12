@@ -11,21 +11,13 @@
   </head>
   <body>
     
-    <%- include ('partials/header') %>
+    <%- include('partials/header') %>
     <div class="title">
       <h1 class="flower-title">Flowers</h1>
       <p class="flower-paragraph">We have all of these flowers in stock.</p>
     </div>
     <div class="container">
-      <!-- <div class="leftside"><h4>Left side</h4></div> -->
-
-      <!-- Testing loop through EJS -->
-      <!-- <% for (let product in products) { %>
-      <div class="product-card">
-        <h4><% product.name %></h4>
-        
-      </div>
-      <% } %> -->
+      
       <% if (locals.products) { %>
         <% for (let product of products) {%>
       <div class="product-card">
@@ -38,14 +30,17 @@
         </p>
         <div class="product-buttons">
           <button class="readmore-btn">Read more</button>
-          <button class="buy-btn">Buy</button>
+          <div class="right-group">
+            <input class="number" type="text" value="1">
+            <button class="buy-btn" id="<%= product.id %>">Buy</button>
+          </div>
         </div>
       </div>
       <% } %>
       <% } %>
       
     </div>
-    <%- include ('partials/footer') %>
+    <%- include('partials/footer') %>
     
     <script
       type="module"

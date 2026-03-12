@@ -30,18 +30,27 @@ const gardenItems = products.filter(function (item) {
 
 app.use(express.static("public"));
 
+// Home-site
 app.get("/", (req, res) => {
   res.render("index.ejs");
 });
 
+// Flower site
 app.get("/flowers", (req, res) => {
   res.render("flowers.ejs", { products: flowerItems });
 });
 
+//Garden site
 app.get("/garden", (req, res) => {
   res.render("garden.ejs", { products: gardenItems });
 });
 
+// Checkout site
+app.get("/checkout", (req, res) => {
+  res.render("checkout.ejs");
+});
+
+// Listening to port 3000
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });

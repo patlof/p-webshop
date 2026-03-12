@@ -25,12 +25,15 @@
         <div class="product-image">
           <img src="<%= product.image %>" alt="Pic of flower" />
         </div>
-        <p>
+        <p class="product-description">
           <%= product.description %>
         </p>
         <div class="product-buttons">
           <button class="readmore-btn">Read more</button>
-          <button class="buy-btn">Buy</button>
+          <div class="right-group">
+            <input class="number" type="text" id="amount" value="1">
+            <button class="buy-btn">Buy</button>
+          </div>
         </div>
       </div>
       <% } %>
