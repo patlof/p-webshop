@@ -25,6 +25,7 @@
         <div class="product-image">
           <img src="<%= product.image %>" alt="Pic of flower" />
         </div>
+        <p class="price">Price: $ <%= product.price %></p>
         <p>
           <%= product.description %>
         </p>
@@ -32,7 +33,8 @@
           <button class="readmore-btn">Read more</button>
           <div class="right-group">
             <input class="number" type="text" value="1">
-            <button class="buy-btn" id="<%= product.id %>">Buy</button>
+            <button class="buy-btn" data-id="<%= product.id %>" data-name="<%= product.name %>" data-price ="<%= product.price %>">Buy</button>
+            
           </div>
         </div>
       </div>

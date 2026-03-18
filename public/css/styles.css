@@ -57,6 +57,16 @@ body {
   text-decoration: none;
 }
 
+.cart-icon {
+  width: 2em;
+  height: 2em;
+  color: red;
+}
+
+.hidden {
+  display: none;
+}
+
 /***********************/
 /* MOBILE */
 /***********************/
@@ -145,11 +155,16 @@ body {
 }
 
 .product-image {
-  padding: 1em;
+  padding: 1em 1em 0 1em;
 }
 
 .product-image img {
   width: 250px;
+}
+
+.price {
+  font-style: normal;
+  font-weight: 600;
 }
 
 .product-description {
@@ -203,13 +218,12 @@ body {
 }
 
 .checkout-container {
+  display: flex;
+  flex-direction: column;
   width: 50%;
   border: 1px solid #333;
   border-radius: 25px;
   background-color: #eee;
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr 1fr;
-  grid-template-rows: auto;
 
   margin-top: 2em;
   padding-bottom: 2em;
@@ -218,11 +232,17 @@ body {
   min-height: 60vh;
 }
 
+.checkout-products {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr;
+  grid-template-rows: auto;
+}
+
 .checkout-title {
   grid-row: 1;
   grid-column: 1/-1;
   text-align: center;
-  padding: 2em 0 1em 0;
+  padding: 1em 0 1em 0;
   font-size: 2em;
 }
 
@@ -256,6 +276,16 @@ body {
 
 .checkout-sum {
   font-weight: 600;
+  margin-top: 2em;
+}
+
+.reset-btn {
+  background-color: red;
+  color: #fff;
+  width: 80%;
+  padding: 0.2em 0 0.2em 0;
+  margin-top: 3em;
+  text-align: center;
 }
 
 /***********************/

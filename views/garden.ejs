@@ -18,21 +18,23 @@
     </div>
     <div class="container">
    
-      <% if (locals.products) { %>
+       <% if (locals.products) { %>
         <% for (let product of products) {%>
       <div class="product-card">
         <h4><%= product.name %></h4>
         <div class="product-image">
           <img src="<%= product.image %>" alt="Pic of flower" />
         </div>
-        <p class="product-description">
+        <p class="price">Price: $ <%= product.price %></p>
+        <p>
           <%= product.description %>
         </p>
         <div class="product-buttons">
           <button class="readmore-btn">Read more</button>
           <div class="right-group">
-            <input class="number" type="text" id="amount" value="1">
-            <button class="buy-btn">Buy</button>
+            <input class="number" type="text" value="1">
+            <button class="buy-btn" data-id="<%= product.id %>" data-name="<%= product.name %>" data-price ="<%= product.price %>">Buy</button>
+            
           </div>
         </div>
       </div>
