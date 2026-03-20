@@ -12,6 +12,14 @@ const yearEL = document.querySelector(".year");
 const currentYear = new Date().getFullYear();
 yearEL.textContent = currentYear;
 
+//Check if there is products in cart, then update cart icon
+const checkCart = JSON.parse(localStorage.getItem("cart"));
+console.log(checkCart);
+if (checkCart != null) {
+  const cartNumber = document.querySelector(".cart-number");
+  cartNumber.innerHTML = checkCart.length;
+}
+
 ////////// Buy button //////////
 const buyBtnEl = document.querySelectorAll(".buy-btn");
 buyBtnEl.forEach((btn) => {
@@ -25,8 +33,6 @@ buyBtnEl.forEach((btn) => {
         event.target.closest(".product-card").querySelector(".number").value,
       ),
     };
-
-    console.log(boughtProduct);
     addProduct(boughtProduct);
   });
 
@@ -34,10 +40,14 @@ buyBtnEl.forEach((btn) => {
   function addProduct(product) {
     const dataLocalStorage = JSON.parse(localStorage.getItem("cart")) || [];
     dataLocalStorage.push(product);
-
+    const cartNumber = document.querySelector(".cart-number");
+    cartNumber.innerHTML = dataLocalStorage.length;
     localStorage.setItem("cart", JSON.stringify(dataLocalStorage));
   }
 });
+///////////////////////////////////////////
+/////////////////CHECKOUT//////////////////
+///////////////////////////////////////////
 
 ////////Show whats in cart on Checkoutpage////////
 function showCheckout() {
@@ -64,7 +74,8 @@ function showCheckout() {
 
   //Calculate sum and print it out
   const total = `<p class="checkout-sum right">Sum: $ ${sum.toFixed(2)}</p>`;
-  const showResetButton = '<button class="right reset-btn">Reset cart</button>';
+  const showResetButton =
+    '<button class="right reset-btn btn">Reset cart</button>';
 
   presentation.insertAdjacentHTML("beforeend", total);
   presentation.insertAdjacentHTML("beforeend", showResetButton);
