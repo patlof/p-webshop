@@ -6,11 +6,24 @@ navBtnEl.addEventListener("click", () => {
   headerEl.classList.toggle("nav-open");
 });
 
-////////// Get date //////////
-
+////////// Get date for footer//////////
 const yearEL = document.querySelector(".year");
 const currentYear = new Date().getFullYear();
 yearEL.textContent = currentYear;
+
+///////////////////////////////////////////
+//////////////Header////////////////
+///////////////////////////////////////////
+
+//Make cart and number clickable and send to Checkoutpage´
+const cartEl = document.querySelector(".cart");
+cartEl.addEventListener("click", () => {
+  window.location.href = "/checkout";
+});
+
+///////////////////////////////////////////
+//////////////Product pages////////////////
+///////////////////////////////////////////
 
 //Check if there is products in cart, then update cart icon
 const checkCart = JSON.parse(localStorage.getItem("cart"));
@@ -33,18 +46,31 @@ buyBtnEl.forEach((btn) => {
         event.target.closest(".product-card").querySelector(".number").value,
       ),
     };
-    addProduct(boughtProduct);
-  });
 
-  //Add product to localStorage
-  function addProduct(product) {
-    const dataLocalStorage = JSON.parse(localStorage.getItem("cart")) || [];
-    dataLocalStorage.push(product);
-    const cartNumber = document.querySelector(".cart-number");
-    cartNumber.innerHTML = dataLocalStorage.length;
-    localStorage.setItem("cart", JSON.stringify(dataLocalStorage));
-  }
+    addProduct(boughtProduct);
+    const originalText = btn.innerHTML;
+    btn.innerHTML = "Added! ✓";
+    btn.classList.add("btn-success"); // Lägg till en CSS-klass för grön färg
+    btn.style.pointerEvents = "none";
+
+    setTimeout(() => {
+      btn.innerHTML = originalText;
+      btn.classList.remove("btn-success");
+      btn.style.pointerEvents = "auto";
+    }, 2000);
+  });
 });
+
+//Add product to localStorage
+function addProduct(product) {
+  const dataLocalStorage = JSON.parse(localStorage.getItem("cart")) || [];
+  dataLocalStorage.push(product);
+  const cartNumber = document.querySelector(".cart-number");
+  cartNumber.innerHTML = dataLocalStorage.length;
+  localStorage.setItem("cart", JSON.stringify(dataLocalStorage));
+  // alert("Product is put in cart!");
+}
+
 ///////////////////////////////////////////
 /////////////////CHECKOUT//////////////////
 ///////////////////////////////////////////

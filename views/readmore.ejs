@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="css/queries.css" />
+
+    <title>Pailun Webshop</title>
+  </head>
+  <body>
+    <%- include ('partials/header') %>
+    <div class="readmore-container">
+
+      <% if (locals.product) { %>
+        <% for (let p of locals.product) {%>
+          
+          <h3 class="readmore-h3">Product name: <%= p.name %></h3>
+          <p class="readmore-paragraph">Article-id: <%= p.id %></p>
+          <p class="readmore-paragraph">Category: <%= p.category %></p>
+          <p class="readmore-paragraph">Description: <%= p.description %></p>
+          <div class="product-image">
+          <img src="<%= p.image %>" alt="Photo of <%= p.name %>" />
+          </div>
+          <p class="readmore-paragraph">Price: <%= p.price%></p>
+
+
+          <% } %>
+          <% } %> 
+    </div>
+    <%- include ('partials/footer') %>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="../js/script.js" defer></script>
+  </body>
+</html>

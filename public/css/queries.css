@@ -19,7 +19,7 @@ instead, 1rem = 1em = 16px */
   .product-buttons {
     display: flex;
     justify-content: right;
-    padding: 1em 1em 0 0;
+    /* padding: 1em 1em 1em 0; */
   }
 
   .product-image {
@@ -247,9 +247,9 @@ instead, 1rem = 1em = 16px */
   }
 
   .buy-btn {
-    padding: 0.7em 1.2em;
+    padding: 0.4em 0.7em;
     font-size: 0.9em;
-    font-weight: 600;
+    font-weight: 500;
   }
 }
 /**************************/
@@ -261,6 +261,23 @@ instead, 1rem = 1em = 16px */
   /* Flower-page */
   .product-image img {
     width: 80;
+  }
+
+  .product-buttons {
+    padding: 0.6em;
+  }
+
+  .readmore-btn {
+    padding: 0.2em 0.4em;
+    font-size: 0.7em;
+    font-weight: 500;
+    margin-right: 0.8em;
+  }
+
+  .buy-btn {
+    padding: 0.4em 0.8em;
+    font-size: 0.7em;
+    font-weight: 600;
   }
 }
 
