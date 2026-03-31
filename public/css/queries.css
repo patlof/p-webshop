@@ -176,15 +176,37 @@ instead, 1rem = 1em = 16px */
     width: 150px;
   }
 
-  /* .leftside {
-    grid-column: 1 / 2;
-    grid-row: 1 / -1;
-    padding: 1em;
-    background-color: #f7dfcb;
-    border: none;
+  /* Checkout-page */
+  .checkout-title {
+    padding: 0.7em 0;
     font-size: 2em;
-    border-radius: 0;
-  } */
+  }
+
+  .left {
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .middle-left {
+    text-align: center;
+    margin-right: 0;
+  }
+
+  .middle-right {
+    text-align: center;
+    margin-right: 0;
+  }
+
+  .right {
+    text-align: center;
+    margin-right: 0;
+  }
+
+  .checkout-sum {
+    font-weight: 600;
+    margin-top: 2em;
+    margin-right: 0.5em;
+  }
 }
 /**************************/
 /* SMALLER TABLETS */
@@ -250,6 +272,16 @@ instead, 1rem = 1em = 16px */
     padding: 0.4em 0.7em;
     font-size: 0.9em;
     font-weight: 500;
+  }
+
+  /* Checkout page */
+
+  .checkout-container {
+    width: 80%;
+  }
+  .reset-btn {
+    margin-top: 2em;
+    font-size: 1em;
   }
 }
 /**************************/
@@ -333,6 +365,45 @@ instead, 1rem = 1em = 16px */
     font-size: 0.7em;
     font-weight: 600;
   }
+
+  /* Checkout page */
+
+  .checkout-title {
+    padding: 0.7em 0;
+    font-size: 2em;
+  }
+
+  .left {
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .middle-left {
+    text-align: center;
+    margin-right: 0;
+  }
+
+  .middle-right {
+    text-align: center;
+    margin-right: 0;
+  }
+
+  .right {
+    text-align: center;
+    margin-right: 0;
+  }
+
+  .checkout-sum {
+    font-weight: 600;
+    margin-top: 2em;
+    margin-right: 0.5em;
+  }
+
+  .reset-btn {
+    margin-top: 2em;
+    font-size: 1em;
+    padding: 0.1em 0.3em;
+  }
 }
 
 /* Below 360 px for Samsung phone */
@@ -365,5 +436,41 @@ instead, 1rem = 1em = 16px */
 
   .product-image img {
     width: 80px;
+  }
+
+  .product-buttons {
+    padding: 0.4em;
+    justify-content: center;
+  }
+
+  .readmore-btn {
+    padding: 0.22em;
+    font-size: 0.7em;
+    font-weight: 500;
+    margin-right: 0.4em;
+  }
+
+  .number {
+    width: 2em;
+    height: 2em;
+    text-align: center;
+    font-size: 0.7em;
+    font-weight: 700;
+  }
+
+  .buy-btn {
+    padding: 0.4em 0.8em;
+    font-size: 0.7em;
+    font-weight: 600;
+  }
+
+  .btn-success {
+    font-size: 0.5em;
+    padding: 0.5em 1em;
+  }
+
+  /* Read more */
+  .readmore-container {
+    padding: 0 3em;
   }
 }

@@ -30,7 +30,10 @@
           <%= product.description %>
         </p>
         <div class="product-buttons">
-          <button class="readmore-btn btn">Read more</button>
+          <form action="/readmore" method="POST">
+            <input type="hidden" name="productid" value="<%= product.id %>">
+            <button class="readmore-btn btn">Read more</button>
+            </form>
           <div class="right-group">
             <input class="number" type="text" value="1">
             <button class="buy-btn btn" data-id="<%= product.id %>" data-name="<%= product.name %>" data-price ="<%= product.price %>">Buy</button>
