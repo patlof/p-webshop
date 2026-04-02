@@ -87,7 +87,7 @@ function showCheckout() {
   let sum = 0;
 
   //Show headlines
-  presentation.insertAdjacentHTML("afterbegin", headlines);
+  presentation?.insertAdjacentHTML("afterbegin", headlines);
 
   //Loop out whole cart
   getLocalStorage.forEach((product) => {
@@ -103,14 +103,14 @@ function showCheckout() {
   const showResetButton =
     '<button class="right reset-btn btn">Reset cart</button>';
 
-  presentation.insertAdjacentHTML("beforeend", total);
-  presentation.insertAdjacentHTML("beforeend", showResetButton);
+  presentation?.insertAdjacentHTML("beforeend", total);
+  presentation?.insertAdjacentHTML("beforeend", showResetButton);
 }
 showCheckout();
 
 //Reset cart/checkout
 const resetBtn = document.querySelector(".reset-btn");
-resetBtn.addEventListener("click", () => {
+resetBtn?.addEventListener("click", () => {
   resetLocalStorage();
 });
 
